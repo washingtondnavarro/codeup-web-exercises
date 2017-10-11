@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>mY fIRST html Form</title>
+
+	</head>
+	
+
+	<body>
+			<h2>Login Form</h2>
+				<form method="get" action="https://requestb.in/x8fyczx8">
+
+					<p>
+						<label for="username">USERNAME</label>
+						<input id="username" name="username" type="text" placeholder="Entre username name here">
+					</p>
+
+					<p>
+						<label for="password">PASSWORD</label>
+						<input id="password" name="password" type="password" placeholder="Entre password name here">
+					</p>
+
+					<p>
+						<button type="summit">Login</button>
+					</p>
+					
+
+				</form>
+				<!--<input type="hidden" id="user_id" name="user_id" value="1234">
+					<textarea id="email_body" name="email_body"> Content here</textarea>-->
+
+			<h2>Compose an Email </h2>
+				<form method="get" action="https://requestb.in/x8fyczx8">
+
+					<p>
+						<label for="To">TO</label>
+						<input id="to" type="text" name="to" placeholder="receiver">
+
+					</p>
+
+					<p>
+						<label for="from">FROM</label>
+						<input id="from" type="text" name="from" placeholder="Sender">
+						
+					</p>					
+
+					<p>
+						<label for="Subject">SUBJECT</label>
+						<input id="Subject" type="text" name="Subject">
+						
+					</p>
+
+					<p>
+						<label for="email_body">CONTENT</label>
+						<Textarea id="email_body" name="email_body" row="5" cols="40"></Textarea>
+
+					</p>
+
+					<p>
+						<input type="submit" value="Send">
+					</p>
+			<h2>Mailing list</h2>
+					<p>
+						<input type="checkbox" id="mailing_list" name="mailing_list" value="yes" checked>
+						<label for="mailing_list">Sign me up for the mailing list!</label>
+
+						<button type="submit">Sign me up</button>
+					</p>
+
+			<H2>Muliple Options</H2>
+					<p>
+						<label><input type="checkbox" id="os1" name="os[]" value="Linux"> Linux</label>
+
+						<label><input type="checkbox" id="os2" name="os[]"
+							value="osx"> OS X</label>
+
+						<label><input type="checkbox" id="os3" name="os[]" value="windows">Windows</label>
+
+						<button type="submit">Submit</button>
+
+					</p>
+
+			<h2>Continent of Origen</h2>
+					<p>
+						<label><input type="radio" name="q1" value="America">America
+						</label>
+
+						<label><input type="radio" name="q1" value="Europe">Europe
+						</label>
+
+						<label><input type="radio" name="q1" value="Asia">Asia
+						</label>
+
+						<label><input type="radio" name="q1" value="Australia">Australia
+						</label>
+
+						<label><input type="radio" name="q1" value="Africa">Africa
+						</label>
+
+						<button type="submit">Sumit</button>
+					</p>
+
+
+			<h2>Innitiation Questions</h2>
+					<p>
+							<label for="language"> Select your laguage of preference: </label>
+
+							<select id="language" name="language" multiple>
+									<option value="1">English</option>
+									<option value="2">Spanish</option>
+									<option value="3">Italian</option>
+									<option selected value="4">French</option>
+
+
+
+							</select>
+							<button type="submit">Submit</button>
+						
+					</p>
+
+				
+
+				</form>
+	</body>
+
+	</html>

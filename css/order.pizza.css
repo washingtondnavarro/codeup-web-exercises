@@ -1,0 +1,26 @@
+.jumbotron {
+    margin-top: 20px;
+    background-image: url("../images/pizza.png");
+    background-color: white;
+    background-size: cover;
+}
+
+.container {
+    background-color: #ff7b29;
+}
+.row {
+    background-color: yellow;
+    text-align: center;
+}
+
+.celeste {
+    background-color:#d9edf7
+}
+
+/*Instructions for devices greater than 992px*/
+
+/*@media (min-width: @sceen-sm-min) */
+
+/*{*/
+    /**/
+/*}*/

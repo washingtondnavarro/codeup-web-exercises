@@ -1,0 +1,76 @@
+body {}
+    /* setting the main container box */
+    .container {
+        max-width: 1600px;
+        min-height: 100vh;
+        width: 60%;
+        background-color: blue;
+        margin: 100px;
+        padding: 50px;
+        border: 0px;
+    }
+    /*.half-page {*/
+    /*max-width: 600px;*/
+    /*min-height: 50px;*/
+    /*width: 80%;*/
+    /*background-color: black;*/
+    /*padding: 10px;*/
+
+    /*}*/
+    /*seeting the row */
+    .row {
+        width: 100%;
+        background-color: gray;
+        margin-bottom: 20px;
+        padding 20px;
+        border: 10px;
+    }
+    /* making sure the next row foes under */
+    .row:after {
+        content: "";
+        display:table;
+        clear: both;
+    }
+
+    /* setting the sizes of the boxes */
+
+    .col-66-66 {
+        width: 66.66%;
+        float: left;
+    }
+    .col-50 {
+        width: 50%;
+        float: left;
+        background-color: yellow;
+    }
+    .col-33 {
+        width: 33.3333%;
+        float: left;
+        background-color: aqua;
+    }
+    .col-25 {
+        width: 25%;
+        float: left;
+        background-color: yellow;
+    }
+
+    .col-12-5 {
+        width: 12.5%;
+        float: left;
+        background-color: #ff7b29;
+    }
+
+    .col-10 {
+        width: 10%;
+        float: left;
+        background-color: red;
+    }
+
+
+    /* creating an inside boarding */
+    .box {
+        border: 1px solid black;
+        padding: 0 px;
+        box-sizing: border-box;
+}
+

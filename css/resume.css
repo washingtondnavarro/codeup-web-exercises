@@ -1,0 +1,60 @@
+
+h1,h2 {
+    color: darkblue;
+    text-align: center;
+}
+body {
+    background: #e0e1ff;
+}
+
+.box {
+    width: 1400px;
+    border-radius: 6px;
+    height: 430px;
+    padding: 100px 5px;
+    border: solid blue;
+    color: darkblue;
+
+/* condensed option */
+
+  /*  width: 1216px;
+    height: 430px;
+    padding: 100px;
+    border: solid blue;
+    color: darkblue;
+    font: AppleGothic; */
+}
+
+/*
+.transitionhand {
+    background: #2db34a;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+.transitionhand:hover {
+    background: #ff7b29;
+}
+*/
+/*
+
+body {
+    color: #fff;
+    font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+*/
+.box1 {
+    background: #2db34a;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 95px;
+    line-height: 95px;
+    text-align: center;
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    width: 1415px;
+}
+.box1:hover {
+    background: #ff7b29;
+}

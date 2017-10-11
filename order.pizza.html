@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>pizza world</title>
+    <!--bootstraping linkage-->
+    <link rel="stylesheet" href="css/bootstrap.min.css.map">
+    <link rel="stylesheet" href="css/order.pizza.css"
+    <!--This make the program use a local service-->
+    <!--but the local server can fail and cause a bad experience-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+</head>
+<body>
+<div>
+        <!--this is the top menu-->
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Pizza World</a></li>
+            <li role="presentation"><a href="#">Order Online</a></li>
+            <li role="presentation"><a href="#">Menu</a></li>
+        </ul>
+            <!--this is for searching the closest store-->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="zip code" aria-describedby="basic-addon1">
+                <span class="input-group-addon" id="basic-addon1">Search stores near you</span>
+                <span><button type="submit" class="btn btn-default"> Sign up</button></span>
+            </div>
+
+</div>
+<!--the image-->
+<div class="container-fluid">
+    <div class="row text-center jumbotron">
+    <h1 style="background: white">Welcome to Pizza World!</h1>
+</div>
+</div>
+
+<div>
+    <h2> Build your own pizza!</h2>
+</div>
+
+    <div>
+    panel
+    <!--navtab & crust option-->
+    <div class="container">
+
+    </div>
+<!--Choose size and crust-->
+
+        <div class="container-fluid">
+            <div class="panel panel-info">
+                <div class="panel-heading">Choose size and crust</div>
+                        <div class="panel-body"></div>
+                <!--inside container & radio option-->
+                        <div class="container-fluid">
+                            <!--small-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Hand tossed</div>
+                                            <div class="panel-body celeste">
+                                                <div>Garlic-seasoned crust with a rich, buttery taste.</div>
+                                            </div>
+                                            <div class="panel-body celeste">
+                                                <div><input type="radio" name="quiz_question_1" value="a">Small (10")</div>
+                                            </div>
+                                            <div class="panel-body celeste">
+                                                <div><input type="radio" name="quiz_question_1" value="b">Medium (12")</div>
+                                            </div>
+                                    </div>
+                            <!--medium-->
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Crunchy thin crust</div>
+                                            <div class="panel-body celeste">
+                                                <div>Thin enough for the optimum crispy to crunch ratio.</div>
+                                            </div>
+                                            <div class="panel-body celeste">
+                                                <div><input type="radio" name="quiz_question_2" value="a">Medium (12")</div>
+                                            </div>
+                                            <div class="panel-body celeste">
+                                                <div><input type="radio" name="quiz_question_2" value="b">Large (14")</div>
+                                            </div>
+                            <!--button-->
+                                        <div class="btn-group" role="group" aria-label="...">
+                                            <button type="button" class="btn btn-default">Next step</button>
+                                        </div>
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+        </div>
+
+
+<!--Choose cheese and sauce-->
+        <div class="container-fluid">
+            <div class="panel panel-info">
+                <div class="panel-heading">Choose cheese and sauce</div>
+                <div class="panel-body"></div>
+                <!--inside container-->
+                <!--cheese-->
+                <div class="container-fluid">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Cheese?</div>
+                        <div class="panel-body celeste">
+                            <!--dropdown-->
+                            <div class="dropdown">
+                                <select class=form-control>
+                                    <option value="light">Light </option>
+                                    <option value="normal">Normal</option>
+                                    <option value="extra">Extra</option>
+                                    <option value="double">Double</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Sauce-->
+                <div class="container-fluid">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Sauce?</div>
+                            <div class="panel-body celeste">
+                                <div>Sauce</div>
+                                    <div class="dropdown">
+                                        <select class=form-control>
+                                            <option value="Tomato">Tomato Sauce</option>
+                                            <option value="dark">Marinara Sauce</option>
+                                            <option value="espresso">BBQ Sauce</option>
+                                            <option value="alredo">Alfreso Sauce</option>
+                                        </select>
+                                </div>
+                            </div>
+
+                        <div class="panel-body celeste">
+                            <div>How much?</div>
+                                <div class="dropdown">
+                                    <select class=form-control>
+                                        <option value="light">light</option>
+                                        <option value="normal">Normal</option>
+                                        <option value="extra">Extra</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+
+                <!--button-->
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Previous step</button>
+                <button type="button" class="btn btn-default">Next step</button>
+            </div>
+            </div>
+        </div>
+<!--chose toppings-->
+        <div class="container-fluid">
+            <div class="panel panel-info">
+                <div class="panel-heading">Choose toppings</div>
+                <div class="panel-body"></div>
+                    <!--inside container-->
+                    <!--first option-->
+                    <div class="container-fluid">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Choose meats</div>
+                        <div class="panel-body celeste">
+
+                            <!--options-->
+                                <div>
+                                    <label for="beef">
+                                        <input id="beef" type="checkbox" name="meats" value="beef">Beef
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="ham">
+                                        <input id="ham" type="checkbox" name="meats" value="ham">Ham
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="philly">
+                                        <input id="philly" type="checkbox" name="meats" value="philly">Philly Steak
+                                    </label>
+                                </div>
+                                <div>
+                                    <label for="bacon">
+                                        <input id="bacon" type="checkbox" name="meats" value="bacon">Bacon
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+
+                    <!--second option-->
+                    <div class="container-fluid">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">Choose meats</div>
+                                    <div class="panel-body celeste">
+
+                                        <!--options-->
+                                        <div>
+                                            <label for="green peppers">
+                                                <input id="green peppers" type="checkbox" name="meats" value="green peppers">Green Peppers
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label for="mushrooms">
+                                                <input id="mushrooms" type="checkbox" name="meats" value="mushrooms">Mushrooms
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label for="onions">
+                                                <input id="onions" type="checkbox" name="meats" value="onions">Onions
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label for="Jalapeno Peppers">
+                                                <input id="Jalapeno Peppers" type="checkbox" name="meats" value="Jalapeno Peppers">Jalapeno Peppers
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                        <!--button-->
+                        <div class="btn-group" role="group" aria-label="...">
+                            <button type="button" class="btn btn-default" style="background-color: #2e6da4">Checkout<span class="glyphicon glyphicon-shopping-cart
+"</span> </button>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+
+
+        <!--files needed for the exercise/ this goes at the bottom-->
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+
+
+</body>
+</html>
+
+
+

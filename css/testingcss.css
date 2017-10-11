@@ -1,0 +1,51 @@
+#abc {
+    color: red;
+    text-align: right;
+    text-decoration: underline;
+}
+.def {
+    color: black;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.ghi {
+    background-color: yellow;
+    text-align: center ;
+    font-size: 50px;
+}
+
+p.def {
+    font-size: 100ppx;
+}
+
+p#abc {
+    background-color: #ff7b29;
+}
+
+p.def.ghi {
+    font-family: "American Typewriter";
+}
+
+#tomato {
+    background-color: tomato;
+}
+#blue {
+    background-color: black;
+}
+#yellow {
+    background-color: yellow;
+}
+#orangered {
+    background-color: orangered;
+}
+#purple {
+    background-color: purple;
+}
+#green {
+    background-color: green;
+}
+
+#para {
+    background-color: #2aabd2;
+}
