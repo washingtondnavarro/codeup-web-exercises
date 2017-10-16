@@ -14,34 +14,36 @@
 
     var day_of_the_week = prompt("What day is today?");
 
-    if (day_of_the_week = "monday || Monday") {
+    if (day_of_the_week.toLowerCase() === "monday") {
         alert("Enjoy your Quote of the Day");
         alert("We hope you enjoy it, See you tomorrow!");
     }
-    else if (day_of_the_week = "tuesday || Tuesday") {
+    else if (day_of_the_week.toLowerCase() === "tuesday") {
             alert("Enjoy your Quote of the Day");
             alert("We hope you enjoy it, See you tomorrow!");
     }
-    else if (day_of_the_week = "wednesday || Wednesday") {
+    else if (day_of_the_week.toLowerCase() === "wednesday") {
         alert("Enjoy your Quote of the Day");
         alert("We hope you enjoy it, See you tomorrow!");
     }
-    else if (day_of_the_week = "thursday || Thursday") {
+    else if (day_of_the_week.toLowerCase() === "thursday") {
         alert("Enjoy your Quote of the Day");
         alert("We hope you enjoy it, See you tomorrow!");
     }
-    else if (day_of_the_week = "friday || Friday") {
+    else if (day_of_the_week.toLowerCase() === "friday") {
         alert("Enjoy your Quote of the Day");
         alert("We hope you enjoy it, See you tomorrow!");
     }
-    else if (day_of_the_week = "saturday || Saturday") {
+    else if (day_of_the_week.toLowerCase() === "saturday") {
         alert("Enjoy your Quote of the Day");
         alert("We hope you enjoy it, See you tomorrow!");
     }
-    else if (day_of_the_week = "sunday || Sunday") {
+    else if (day_of_the_week.toLowerCase() === "sunday") {
         alert("Enjoy your Quote of the Day");
         alert("We hope you enjoy it, See you tomorrow!");
     }
+    else
+        alert("Summit a different day please")
 
 
 
