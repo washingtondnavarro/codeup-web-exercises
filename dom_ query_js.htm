@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://java.codeup.com/examples/javascript/dom-query-js.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>DOM: Query and Modify</title>
+</head>
+<body>
+
+<h1 id="main-header">Hello World!</h1>
+<ul>
+    <li data-dbid="1">Item 1</li>
+    <li data-dbid="2">Item 2</li>
+    <li data-dbid="3">Item 3</li>
+    <li data-dbid="4">Item 4</li>
+    <li data-dbid="5">Item 5</li>
+</ul>
+<h2 id="sub-header">Hello Again.</h2>
+<p class="sub-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in
+    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+    culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<!--buttons A1-->
+<h1>DOM Events Lecture</h1>
+<button id="buttonone">Button One </button>
+<button id="buttontwo">Button Two </button>
+<button id="buttonthree">Button Three </button>
+<button id="buttonfour">Button Four </button>
+
+
+
+
+<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1rDc5QAIsu7sHYLoin5MMcU4Hkg0eoLc&callback=initMap"-->
+        <!--type="text/javascript">-->
+
+<script>
+
+
+
+    (function() {
+        "use strict";
+        // TODO: Uncomment next line and get the main header element by id
+         var mainHeader = document.getElementById("main-header");
+
+        // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        mainHeader.innerHTML = "JavaScrip is Cool";
+
+        // TODO: Uncomment the next line and get the sub header element by id
+         var subHeader = document.getElementById("sub-header");
+
+        // TODO: Set the text color of subHeader to blue
+        subHeader.style.color = "blue";
+
+        // TODO: Uncomment the next line and get all list items
+         var listItems = document.getElementsByTagName("li");
+
+        // TODO: Set text color on every other list item to grey
+        for(var i = 0; i < listItems.length; i++){
+            if(i % 2 ==0) {
+                listItems[i].style.color = "grey";
+            }
+            if(listItems[i].getAttribute("data-dbid") == 1) {
+            listItems[i].style.color = "blue"}
+        }
+
+        // TODO: Set text color of li with dbid = 1 to blue
+
+        // TODO: Uncomment the next line and get all elements with class name sub-paragraph
+         var subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+        // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+        subParagraphs[0].addEventListener("click", function () {
+            subParagraphs[0].innerText = "Mission Accomplish!";
+
+        });
+
+        //    <!--creating the variable A1 -->
+
+        var buttonone = document.getElementById("buttonone");
+        buttonone.addEventListener("click", function() {
+            alert("WE are going to change the Main Header");
+            mainHeader.innerHTML = "Washington is more cool than JavaScript";
+            console.log("Test for Button One")
+        });
+        var buttontwo = document.getElementById("buttontwo");
+        buttontwo.addEventListener("click", function() {
+            console.log("Test for button two");
+            alert("why you ask?");
+            subHeader.innerHTML = "Cause He is!"
+        });
+        var buttonthree = document.getElementById("buttonthree");
+        buttonthree.addEventListener("click", function() {
+            console.log("Test for button three");
+            alert("We are going to change the color of the fonts");
+            mainHeader.style.color = "red";
+            subHeader.style.color = "red"
+
+        });
+        var buttonfour = document.getElementById("buttonfour");
+        buttonfour.addEventListener("click", function() {
+            console.log("Test");
+            var answer = prompt("Did you like the exercise?");
+            if (answer = "yes"){
+                    subParagraphs[0].innerText = "THANK YOU";
+                    mainHeader.innerHTML = "THANK YOU";
+                    subHeader.innerHTML = "THANK YOU";
+            }
+            else {
+                document.style.background = "red"
+            }
+
+
+
+
+
+        });
+
+
+//
+//      Open the HTML file named dom_query_js.html that you created in the last lesson.
+//      Add 4 buttons to the page.
+//      Attach click event listeners to each of the buttons and have the handlers perform the modifications that were automatically taking place.
+//      For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
+//      View the results in your browser to test for the expected output.
+//      Finally, save your work, commit the changes to your git repository, and push to GitHub.
+
+//buttoms
+
+
+
+
+
+
+     })();
+</script>
+
+
+
+
+</body></html>
