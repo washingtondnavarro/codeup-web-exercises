@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="/login">
+
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text">
+    <br>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password">
+    <br>
+
+    <input type="submit">
+
+    A <input type="radio" name="quiz_question_1" value="a"><br>
+    B <input type="radio" name="quiz_question_1" value="b"><br>
+    C <input type="radio" name="quiz_question_1" value="c"><br>
+    D <input type="radio" name="quiz_question_1" value="d"><br>
+</form>
+<select name="coffee_preference">
+    <option value="light">Light Roast</option>
+    <option value="dark">Dark Roast</option>
+    <option value="espresso">Espresso Blend</option>
+</select>
+
+<input type="hidden" name="user_id" value="432">
+
+<input name="newsletter_signup" value="true" type="checkbox" checked>Sign Up For The Email Newsletter
+</body>
+</html>
