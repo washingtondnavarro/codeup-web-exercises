@@ -7,10 +7,19 @@
         .invisible{
             display: none;
         }
+        .invisiblepic{
+            display: none;
+        }
+        .paraver{
+            visibility: visible;
+        }
 
     </style>
 </head>
 <body>
+<div id="desapertoo">
+    <h1>Would you like to sign up for our newspaper?</h1> <span id="desaper"><sup>X</sup></span>
+</div>
 
 <h1>Ecuador Top 10 Places to Visit</h1>
 <dl>
@@ -39,33 +48,56 @@
 </dl>
 
 <button id="toggle"><h3>Show me the Answers</h3></button>
+<br>
+<hr>
 
+<div>
+<div>
+    <img src="images/Image1.jpg">
 
-<!--<h3 id="national-parks-heading">National Parks</h3>-->
-<!--<ul id="national-parks">-->
-    <!--<li>Arches</li>-->
-    <!--<li>Badlands</li>-->
-    <!--<li>Carlsbad Caverns</li>-->
-    <!--<li>Denali</li>-->
-    <!--<li>Everglades</li>-->
-<!--</ul>-->
-<!--<h3>State Parks of Texas</h3>-->
-<!--<ul id="state-parks-texas">-->
-    <!--<li>Abilene</li>-->
-    <!--<li>Big Bend</li>-->
-    <!--<li>Choke Canyon</li>-->
-    <!--<li>Davis Mountains</li>-->
-    <!--<li>Enchanted Rock</li>-->
-<!--</ul>-->
-<!--<h3>State Parks of San Antonio</h3>-->
-<!--<ul id="state-parks-texas">-->
-    <!--<li>Abilene</li>-->
-    <!--<li>Big Bend</li>-->
-    <!--<li>Choke Canyon</li>-->
-    <!--<li>Davis Mountains</li>-->
-    <!--<li>Enchanted Rock</li>-->
-<!--</ul>-->
-<!--<button id="to"><h3>Show me the Answers</h3></button>-->
+        <button class="togglepicone"><h3 id="national-parks-heading">National Parks images</h3></button>
+
+            <ul id="national-parks">
+                <li class="invisible">Arches</li>
+                <li class="invisible">Badlands</li>
+                <li class="invisible">Carlsbad Caverns</li>
+                <li class="invisible">Denali</li>
+                <li class="invisible">Everglades</li>
+            </ul>
+
+</div>
+
+<div>
+        <img src="images/Image1.jpg">
+
+        <button class="togglepicone"><h3 id="state-parks">States Parks of Texas images</h3></button>
+
+            <ul id="state-parks-texas">
+                <li class="invisible">Abilene</li>
+                <li class="invisible">Big Bend</li>
+                <li class="invisible">Choke Canyon</li>
+                <li class="invisible">Davis Mountains</li>
+                <li class="invisible">Enchanted Rock</li>
+            </ul>
+</div>
+
+<div>
+        <img src="images/Image1.jpg">
+
+        <button class="togglepicone"><h3 id="city-parks-sanantonio">SAn Antonio Parks images</h3></button>
+
+            <ul id="city-parks-San-Antonio">
+                <li class="invisible">Abilene</li>
+                <li class="invisible">Big Bend</li>
+                <li class="invisible">Choke Canyon</li>
+                <li class="invisible">Davis Mountains</li>
+                <li class="invisible">Enchanted Rock</li>
+            </ul>
+</div>
+
+<button id="toggletoo"><h3>Show me the Answers</h3></button>
+<button id="togglethree"><h3>Show me the Answers</h3></button>
+</div>
 
 <script src="js/jquery-2.2.4.js"?></script>
 <script>
@@ -78,20 +110,29 @@
     $("dt").click(function (e) {
             $(e.target).css('background-color', 'yellow');
     });
+    $('#toggletoo').click(function(e) {
+        e.preventDefault();
+        $('li').toggleClass("invisible");
+    });
 
-
-// didnt work out
-//    $( "ul" ).each(function( index ) {
-////        console.log( index + ": " + $( this ).text() );
-//        $('#highlited').click(function() {
-////        e.preventDefault();
-//        $( "li" ).last().css( "background-color", "red" );
-//    });
-
-
+//    working with elements after they are transformed into objects
 //    $('h3').click(function(){
 //        console.log($(this).next().children().last().css("background-color"," red"));
 //    });
+
+    $('h3').click(function(){
+        console.log($(this).next().children().first().css("background-color","yellow"));
+    });
+
+    $("#desaper").click(function () {
+        $("#desapertoo").hide();
+    });
+//    $("img").hide();
+
+
+    $(".togglepicone").click(function(){
+        $(this).slideToggle();
+    });
 //    })
 
 
