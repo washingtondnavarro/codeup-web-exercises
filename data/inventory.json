@@ -1,0 +1,75 @@
+[
+  {
+    "typeOfCloth": "Skirt",
+    "color": "Orange",
+    "size": "sm",
+    "image": "./images/image1.jpg"
+  },
+  {
+    "typeOfCloth": "Skirt",
+    "color": "Blue",
+    "size": "m",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Skirt",
+  "color": "Red",
+  "size": "lg",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Pants",
+  "color": "Orange",
+  "size": "sm",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Pants",
+  "color": "blue",
+  "size": "m",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Pants",
+  "color": "Red",
+  "size": "l",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Shirt",
+  "color": "Orange",
+  "size": "sm",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Shirt",
+  "color": "Blue",
+  "size": "m",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Shirt",
+  "color": "Red",
+  "size": "l",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Sweater",
+  "color": "Orange",
+  "size": "sm",
+    "image": "./images/image1.jpg"
+  },
+  {
+  "typeOfCloth": "Sweater",
+  "color": "Blue",
+  "size": "m",
+    "image": "./images/image1.jpg"
+  },
+  {
+    "typeOfCloth": "Sweater",
+    "color": "Red",
+    "size": "l",
+    "image": "./images/image1.jpg"
+  }
+
+]
