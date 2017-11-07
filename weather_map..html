@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Exercise</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<style type="text/css">
+    .panel{
+        border-color: black;
+        border-width: thin;
+    }
+
+    .backblue{
+        background-color: #b4dbfa;
+    }
+
+    .backwhite{
+        background-color: whitesmoke;
+    }
+    #map-canvas {
+        width: 1170px;
+        height: 481px;
+    }
+    .map-styling {
+        border-color: black;
+        align-self: center;
+    }
+
+</style>
+
+
+
+</head>
+<body>
+
+    <div class="container panel backblue">
+            <div class="row">
+                <!--Title-->
+                    <div>
+                        <h1 style="text-align: center">Weather Application</h1>
+                    </div>
+
+                <!--location-->
+                    <div id="lugar">
+                    </div>
+                <!--body-->
+                    <div class="container" id="post">
+                    </div>
+                <!--the map-->
+                     <div class="map-styling" id="map-canvas">
+                    </div>
+            </div>
+    </div>
+
+
+<!--The scrips required to make everything work-->
+        <!--jquery-->
+    <script src="js/jquery-2.2.4.min.js"></script>
+        <!--bootstraping-->
+    <script src="js/bootstrap.min.js"></script>
+        <!--the map-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1rDc5QAIsu7sHYLoin5MMcU4Hkg0eoLc"></script>
+        <!--// needed to show the map-->
+    <script type="text/javascript">
+
+//    <!--convert the document into a object-->
+
+//   getting the array with the weather information
+
+    $(document).ready(function () {
+
+        "use strict";
+
+
+//        global variable for the weather and the map
+
+        var locacione = prompt('Please enter your location: ');
+            console.log(locacione);
+
+//                        requesTheInformation(e);
+
+
+
+            function requesTheInformation (lat, lng){
+//                variable to transform the input into a string because the parameter for the location of the weather is only accepted as a String
+                 var locacionetoo = locacione.toString();
+                console.log(locacionetoo);
+
+//                this is the key to get the array from the Weather API at openweathermap
+                    var eltimpo = $.get("http://api.openweathermap.org/data/2.5/forecast", {
+                        APPID: "2ef00d612443730877f35acce6ed0c6d",
+                        cnt: 3,
+                        units: "imperial",// to change it to readable information
+//                        q: locacionetoo // the string from the the location input
+                        lat: lat,
+                        lon: lng
+                        });
+            //              to make sure the information is received from the website
+                            eltimpo.done(function(data) {
+                                console.log(data.list);
+            //                  then we call it to create the text ont he function defined after this (ALFA)
+                                informationHTML(data.list)
+                                 });
+                //              heatlevels(data.list[0].levels.heat);
+            //                  in case it fails, we get the message
+                                eltimpo.fail(function(data){
+                                console.log(data);
+                                });
+            }
+
+//    to post the data in the HTML(ALFA)
+
+            function informationHTML(datatoo) {
+                    var datatooHTML = "";
+                    var datatooHTMLlugar = "";
+
+                    datatooHTMLlugar += "<div><h3 style='text-align: center'>Location: " + locacione + "</h3></div>";
+
+
+                    datatoo.forEach(function(datatoo) {
+
+                            datatooHTML += "<div class='col-md-4 panel backwhite'>";
+                            datatooHTML += "<p>Temperature: " + datatoo.main.temp_min + "/" + datatoo.main.temp_max + "</p>" ;
+                            datatooHTML += "<p><img src='http://openweathermap.org/img/w/" + datatoo.weather[0].icon + ".png'></p>";
+                            datatooHTML += "<p>Clouds: " + datatoo.weather[0].description + "</p>";
+                            datatooHTML += "<p>Humidity: " + datatoo.main.humidity + "</p>";
+                            datatooHTML += "<p>Wind: " + datatoo.wind.speed + "</p>";
+                            datatooHTML += "<p>Pressure: " + datatoo.main.pressure + "</p>";
+                            datatooHTML += "</div>"
+
+                    });
+
+                    $('#post').html(datatooHTML);
+                    $('#lugar').html(datatooHTMLlugar)
+            }
+
+
+//the map and the image
+
+            function creatingAmapBylocation() {
+
+             // Set our map options
+                    var mapOptions = {
+                    // Set the zoom level
+                        zoom: 5
+
+                    // This sets the center of the map at our location
+//                        center: {
+//                        lat: 29.426791,
+//                        lng: -98.489602
+//                        }
+                    };
+
+            // Render the map
+                    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+                        //enter new address (Include code from previous example)
+                        // Set our address to geocode
+                        //  var address = "3535 Foster Meadows, San Antonio, TX, 78222";
+                        //OR Ask for Address Input
+                        //var address = prompt("Enter Address");
+                        // Init geocoder object
+                    var geocoder = new google.maps.Geocoder();// to change to variable to locacione
+                         // Geocode our address
+                    geocoder.geocode({"address": locacione}, function (results, status) {
+                        console.log(results);
+                    var latitude = results[0].geometry.location.lat();
+                    var longitude = results[0].geometry.location.lng();
+                        console.log(latitude);
+                        console.log(longitude);
+
+            //creating a pin
+                    // Create lat and long for our marker position
+                    var pinLocation = {lat: latitude, lng: longitude};
+
+                    // Add the marker to our existing map
+
+                        var marker = new google.maps.Marker({
+                        position: pinLocation,
+                        map: map,
+                        draggable: true,
+                        title:"Drag me!"
+                        });
+            ////draging the marker
+
+                        google.maps.event.addListener(marker, "dragend", function () { // e collects the information from the event
+
+                            console.log(marker.getPosition().lat());
+                            console.log(marker.getPosition().lng());
+                            var lat = marker.getPosition().lat();
+                            var lng = marker.getPosition().lng();
+                            requesTheInformation(lat, lng);
+                           });
+
+
+
+//                            var newlocacion = marker.draggable function (e)
+//                            console.log("i am here");
+
+
+
+            //make it refresh by clikc
+
+//                    marker.addListener("click", function () {
+//                        infoWindow.open(map, marker);
+//                    });
+                    // Check for a successful result
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        // Recenter the map over the address
+                        map.setCenter(results[0].geometry.location);
+                    } else {
+                        // Show an error message with the status if our request fails
+                        alert("Geocoding was not successful - STATUS: " + status);
+                    }
+          });
+
+
+            }
+
+
+    requesTheInformation(29, -120);
+    creatingAmapBylocation();
+
+
+    });
+    //this is the closing from the document function
+</script>
+</body>
+</html>
